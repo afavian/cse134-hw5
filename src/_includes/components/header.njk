@@ -1,0 +1,12 @@
+<header>
+  <h1>{{ site.author }}</h1>
+  <nav>
+  <ul>
+{% for item in site.navigation %}
+  <li>
+  <a href="{{ item.url }}"{% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.name }}</a>
+  </li>
+{% endfor %}
+  </ul>
+  </nav>
+  </header>
