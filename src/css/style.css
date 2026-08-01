@@ -4,7 +4,7 @@
   --text: black;
 }
 @media(prefers-color-scheme: dark){
-  :root{
+  :root:not([data-theme]){
     --background: #111;
     --text: white;
   }
@@ -18,16 +18,16 @@ html[data-theme="dark"]{
   --text: white;
 }
 body{
-  background:var(--background);
-  color:var(--text);
-  font-family:sans-serif;
-  max-width:70rem;
-  margin:auto;
-  padding:1rem;
+  background: var(--background);
+  color: var(--text);
+  font-family: sans-serif;
+  max-width: 70rem;
+  margin: auto;
+  padding: 1rem;
 }
 img{
-  max-width:100%;
+  max-width: 100%;
 }
 .no-js #theme-picker{
-  display:none;
+  display: none;
 }
