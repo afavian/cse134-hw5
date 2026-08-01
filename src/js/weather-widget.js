@@ -29,7 +29,7 @@ class WeatherWidget extends HTMLElement {
   renderError(message){
     this.setAttribute("state", "error");
     this.replaceChildren();
-    const = document.createElement("p");
+    const p = document.createElement("p");
     p.textContent = message;
 
     const button = document.createElement("button");
