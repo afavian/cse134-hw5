@@ -29,8 +29,8 @@ function loadTheme(){
   }
 }
 if(picker) {
-  radios.forEach(radio)=>{
-    radio.addEventListener("change",(event) => {
+  radios.forEach(function (radio) {
+    radio.addEventListener("change",function (event){
         const theme = event.target.value;
         applyTheme(theme);
         saveTheme(theme);
