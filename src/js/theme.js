@@ -19,7 +19,7 @@ function loadTheme(){
     const saved = localStorage.getItem("theme");
     if(saved){
       applyTheme(saved);
-      const selected = document.querySelector('input[value="${saved}"]');
+      const selected = document.querySelector(`input[value="${saved}"]`);
       if(selected){
         selected.checked = true;
       }
