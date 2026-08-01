@@ -12,32 +12,41 @@ function applyTheme(theme){
     document.documentElement.dataset.theme = theme;
   }
 }
-try{
-  const saved = localStorage.getItem("theme");
-  if(saved){
-    applyTheme(saved);
-    document.querySelector(
-      `input[value="${saved}"]`
-    ).checked = true;
+fucntion saveTheme(theme){
+  try{
+    localStorage.setItem(
+      "theme", 
+      theme
+      );
+  }
+  catch(error){
+    console.log("localStorage unavailable");
   }
 }
-catch(error){
-  
+function loadTheme(){
+  try{
+    const saved = localStorage.getItem("theme");
+    if(saved){
+      applyTheme(saved);
+      const selected = document.querySelector('input[value="${saved}"]');
+      if(selected){
+        selected.checked = true;
+      }
+    } 
+    catch(error){
+      console.log("Could not load theme");
+  }
 }
-radios.forEach(radio => {
-  radio.addEventListener(
-    "change",
-    (event)=>{
-      const theme = event.target.value;
-      applyTheme(theme);
-      try{
-        localStorage.setItem(
-          "theme",
-          theme
-        );
+if(picker) {
+  radios.forEach(radio)=>{
+    radio.addEventListener(
+      "change",
+      (event)=>{
+        const theme = event.target.value;
+        applyTheme(theme);
+        saveTheme(theme);
       }
-      catch(error){
-        
-      }
-    });
-});
+    );
+  }
+}
+loadTheme();
