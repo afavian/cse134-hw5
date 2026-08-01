@@ -1,1 +1,30 @@
+{
+  "title": "Andrea Favian Cruz Portfolio",
+  "author": "Andrea Favian Cruz",
+  "year": "2026",
 
+  "social": {
+    "github": "https://github.com/afavian"
+  };
+
+  "navigation": [
+    {
+      "name": "Home",
+      "url": "/"},
+    {
+      "name": "About",
+      "url": "/about/"},
+    {
+      "name": "Projects",
+      "url": "/projects/"},
+    {
+      "name": "Contact",
+      "url": "/contact/"
+    }
+  ]
+}
+    
+      
+
+    
+    
