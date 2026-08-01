@@ -1,21 +1,21 @@
 :root{
   color-scheme: light dark;
-  --background:white;
-  --text:black;
+  --background: white;
+  --text: black;
 }
-@media(prefers-colo-scheme:dark){
+@media(prefers-color-scheme: dark){
   :root{
-    --background:#111;
-    --text:white;
+    --background: #111;
+    --text: white;
   }
 }
 html[data-theme="light"]{
-  --background:white;
-  --text:black;
+  --background: white;
+  --text: black;
 }
 html[data-theme="dark"]{
-  --background:#111;
-  --text:white;
+  --background: #111;
+  --text: white;
 }
 body{
   background:var(--background);
