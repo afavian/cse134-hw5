@@ -1,1 +1,33 @@
-
+:root{
+  color-scheme: light dark;
+  --background:white;
+  --text:black;
+}
+@media(prefers-colo-scheme:dark){
+  :root{
+    --background:#111;
+    --text:white;
+  }
+}
+html[data-theme="light"]{
+  --background:white;
+  --text:black;
+}
+html[data-theme="dark"]{
+  --background:#111;
+  --text:white;
+}
+body{
+  background:var(--background);
+  color:var(--text);
+  font-family:sans-serif;
+  max-width:70rem;
+  margin:auto;
+  padding:1rem;
+}
+img{
+  max-width:100%;
+}
+.no-js #theme-picker{
+  display:none;
+}
