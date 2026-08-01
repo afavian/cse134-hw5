@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "components/head.njk" %}
+<body>
+<a href="#main-content">
+Skip to content
+</a>
+{% include "components/header.njk" %}
+<main id="main-content">
+{{ content | safe }}
+</main>
+{% include "components/footer.njk" %}
+<script type="module" src="/js/theme.js"></script>
+<script type="module" src="/js/weather-widget.js"></script>
+</body>
+</html>
